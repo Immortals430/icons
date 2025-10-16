@@ -65,6 +65,108 @@
         ["#12c2e9", "#c471ed", "#f64f59"],
         ["#ff416c", "#ff4b2b"],
         ["#00b09b", "#96c93d"],
+        ["#ff9a9e", "#fecfef"],
+        ["#a1c4fd", "#c2e9fb"],
+        ["#fbc2eb", "#a6c1ee"],
+        ["#fad0c4", "#ffd1ff"],
+        ["#84fab0", "#8fd3f4"],
+        ["#ffecd2", "#fcb69f"],
+        ["#f6d365", "#fda085"],
+        ["#ff9a9e", "#fecfef"],
+        ["#a1ffce", "#faffd1"],
+        ["#fddb92", "#d1fdff"],
+        ["#43e97b", "#38f9d7"],
+        ["#30cfd0", "#330867"],
+        ["#6a11cb", "#2575fc"],
+        ["#ff416c", "#ff4b2b"],
+        ["#00b09b", "#96c93d"],
+        ["#12c2e9", "#c471ed", "#f64f59"],
+        ["#e0c3fc", "#8ec5fc"],
+        ["#f093fb", "#f5576c"],
+        ["#89f7fe", "#66a6ff"],
+        ["#fdfbfb", "#ebedee"],
+        ["#fc5c7d", "#6a82fb"],
+        ["#70e1f5", "#ffd194"],
+        ["#a8edea", "#fed6e3"],
+        ["#d3cce3", "#e9e4f0"],
+        ["#bdc3c7", "#2c3e50"],
+        ["#c6ffdd", "#fbd786", "#f7797d"],
+        ["#9796f0", "#fbc7d4"],
+        ["#ffafbd", "#ffc3a0"],
+        ["#00c6ff", "#0072ff"],
+        ["#f7971e", "#ffd200"],
+        ["#00d2ff", "#928DAB"],
+        ["#a8c0ff", "#3f2b96"],
+        ["#ff6e7f", "#bfe9ff"],
+        ["#2af598", "#009efd"],
+        ["#8e2de2", "#4a00e0"],
+        ["#f0c27b", "#4b1248"],
+        ["#ff7e5f", "#feb47b"],
+        ["#00F260", "#0575E6"],
+        ["#e1eec3", "#f05053"],
+        ["#ff9966", "#ff5e62"],
+        ["#f4e2d8", "#ba5370"],
+        ["#8360c3", "#2ebf91"],
+        ["#ff4e50", "#f9d423"],
+        ["#1f4037", "#99f2c8"],
+        ["#0f2027", "#203a43", "#2c5364"],
+        ["#3a7bd5", "#3a6073"],
+        ["#11998e", "#38ef7d"],
+        ["#fc00ff", "#00dbde"],
+        ["#ee9ca7", "#ffdde1"],
+        ["#42275a", "#734b6d"],
+        ["#fdc830", "#f37335"],
+        ["#f12711", "#f5af19"],
+        ["#833ab4", "#fd1d1d", "#fcb045"],
+        ["#1a2a6c", "#b21f1f", "#fdbb2d"],
+        ["#7F00FF", "#E100FF"],
+        ["#56ab2f", "#a8e063"],
+        ["#2C3E50", "#4CA1AF"],
+        ["#ffb347", "#ffcc33"],
+        ["#E55D87", "#5FC3E4"],
+        ["#2193b0", "#6dd5ed"],
+        ["#FF512F", "#DD2476"],
+        ["#C33764", "#1D2671"],
+        ["#141E30", "#243B55"],
+        ["#42275a", "#734b6d"],
+        ["#ff0084", "#33001b"],
+        ["#f46b45", "#eea849"],
+        ["#ff5f6d", "#ffc371"],
+        ["#00c3ff", "#ffff1c"],
+        ["#9CECFB", "#65C7F7", "#0052D4"],
+        ["#43C6AC", "#191654"],
+        ["#3a1c71", "#d76d77", "#ffaf7b"],
+        ["#40E0D0", "#FF8C00", "#FF0080"],
+        ["#c0c0aa", "#1cefff"],
+        ["#fffc00", "#ffffff"],
+        ["#EECDA3", "#EF629F"],
+        ["#C9D6FF", "#E2E2E2"],
+        ["#606c88", "#3f4c6b"],
+        ["#314755", "#26a0da"],
+        ["#457fca", "#5691c8"],
+        ["#e96443", "#904e95"],
+        ["#02aab0", "#00cdac"],
+        ["#DA22FF", "#9733EE"],
+        ["#FF8008", "#FFC837"],
+        ["#56CCF2", "#2F80ED"],
+        ["#3EADCF", "#ABE9CD"],
+        ["#09203f", "#537895"],
+        ["#F0CB35", "#C02425"],
+        ["#e65c00", "#F9D423"],
+        ["#544a7d", "#ffd452"],
+        ["#e1eec3", "#f05053"],
+        ["#FF3CAC", "#784BA0", "#2B86C5"],
+        ["#FFAFBD", "#ffc3a0"],
+        ["#654ea3", "#eaafc8"],
+        ["#C6EA8D", "#FE90AF"],
+        ["#00B4DB", "#0083B0"],
+        ["#76b852", "#8DC26F"],
+        ["#BBD2C5", "#536976", "#292E49"],
+        ["#EC6F66", "#F3A183"],
+        ["#a8ff78", "#78ffd6"],
+        ["#de6161", "#2657eb"],
+        ["#3CA55C", "#B5AC49"],
+        ["#348F50", "#56B4D3"],
       ];
 
       // 🧠 Generate 100 gradient + image boxes
@@ -84,31 +186,30 @@
         document.body.appendChild(div);
       }
 
-for (let i = 0; i < 100; i++) {
-  const colors = baseGradients[i % baseGradients.length];
-  const gradient = `linear-gradient(45deg, ${colors.join(", ")})`;
+      for (let i = 0; i < 100; i++) {
+        const colors = baseGradients[i % baseGradients.length];
+        const gradient = `linear-gradient(45deg, ${colors.join(", ")})`;
 
-  // ✅ Create the div first
-  const div = document.createElement("div");
-  div.classList.add("gradient-box");
-  div.style.background = gradient;
+        // ✅ Create the div first
+        const div = document.createElement("div");
+        div.classList.add("gradient-box");
+        div.style.background = gradient;
 
-  // ✅ Then create the image
-  const img = document.createElement("img");
-  img.src = "icon.svg";
-  img.alt = "icon";
-  img.style.width = "60%";
-  img.style.height = "60%";
-  img.style.objectFit = "contain";
-  img.style.filter = "brightness(0) invert(1)"; // 👈 makes it white
-  img.style.opacity = "0.9";
-  img.style.transition = "opacity 0.3s ease";
+        // ✅ Then create the image
+        const img = document.createElement("img");
+        img.src = "icon.svg";
+        img.alt = "icon";
+        img.style.width = "60%";
+        img.style.height = "60%";
+        img.style.objectFit = "contain";
+        img.style.filter = "brightness(0) invert(1)"; // 👈 makes it white
+        img.style.opacity = "0.9";
+        img.style.transition = "opacity 0.3s ease";
 
-  // ✅ Append image to div, then div to body
-  div.appendChild(img);
-  document.body.appendChild(div);
-}
-
+        // ✅ Append image to div, then div to body
+        div.appendChild(img);
+        document.body.appendChild(div);
+      }
     </script>
   </body>
 </html>
