@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Icon</title>
+    <style>
+      body {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 10px;
+        padding: 20px;
+        background: #f9fafb;
+      }
+
+      .gradient-box {
+        position: relative;
+        border-radius: 12px;
+        height: 120px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.3s ease;
+      }
+
+      .gradient-box:hover {
+        transform: scale(1.05);
+      }
+
+      .gradient-box img {
+        width: 60%;
+        height: 60%;
+        object-fit: contain;
+        opacity: 0.9;
+        transition: opacity 0.3s ease;
+      }
+
+      .gradient-box:hover img {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      // 🎨 Base gradient color sets
+      const baseGradients = [
+        ["#ff6b6b", "#f8e9a1", "#4ecdc4"],
+        ["#ff9a9e", "#fad0c4"],
+        ["#a1c4fd", "#c2e9fb"],
+        ["#ffecd2", "#fcb69f"],
+        ["#f6d365", "#fda085"],
+        ["#84fab0", "#8fd3f4"],
+        ["#a18cd1", "#fbc2eb"],
+        ["#f093fb", "#f5576c"],
+        ["#43e97b", "#38f9d7"],
+        ["#30cfd0", "#330867"],
+        ["#fdfbfb", "#ebedee"],
+        ["#e0c3fc", "#8ec5fc"],
+        ["#fddb92", "#d1fdff"],
+        ["#9890e3", "#b1f4cf"],
+        ["#fbc2eb", "#a6c1ee"],
+        ["#fddb92", "#f7b267"],
+        ["#6a11cb", "#2575fc"],
+        ["#12c2e9", "#c471ed", "#f64f59"],
+        ["#ff416c", "#ff4b2b"],
+        ["#00b09b", "#96c93d"],
+      ];
+
+      // 🧠 Generate 100 gradient + image boxes
+      for (let i = 0; i < 100; i++) {
+        const colors = baseGradients[i % baseGradients.length];
+        const gradient = `linear-gradient(45deg, ${colors.join(", ")})`;
+
+        const div = document.createElement("div");
+        div.classList.add("gradient-box");
+        div.style.background = gradient;
+
+        const img = document.createElement("img");
+        img.src = "icon.svg"; // 👈 your local icon in root dir
+        img.alt = "icon";
+
+        div.appendChild(img);
+        document.body.appendChild(div);
+      }
+
+for (let i = 0; i < 100; i++) {
+  const colors = baseGradients[i % baseGradients.length];
+  const gradient = `linear-gradient(45deg, ${colors.join(", ")})`;
+
+  // ✅ Create the div first
+  const div = document.createElement("div");
+  div.classList.add("gradient-box");
+  div.style.background = gradient;
+
+  // ✅ Then create the image
+  const img = document.createElement("img");
+  img.src = "icon.svg";
+  img.alt = "icon";
+  img.style.width = "60%";
+  img.style.height = "60%";
+  img.style.objectFit = "contain";
+  img.style.filter = "brightness(0) invert(1)"; // 👈 makes it white
+  img.style.opacity = "0.9";
+  img.style.transition = "opacity 0.3s ease";
+
+  // ✅ Append image to div, then div to body
+  div.appendChild(img);
+  document.body.appendChild(div);
+}
+
+    </script>
+  </body>
+</html>
